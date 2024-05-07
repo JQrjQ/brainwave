@@ -42,7 +42,7 @@ export const navigation = [
     title: "Features",
     url: "#features",
   },
-  {
+  /*{
     id: "1",
     title: "Pricing",
     url: "#pricing",
@@ -62,10 +62,10 @@ export const navigation = [
     title: "New account",
     url: "#signup",
     onlyMobile: true,
-  },
+  },*/
   {
     id: "5",
-    title: "Sign in",
+    title: "Join Waitlist",
     url: "#login",
     onlyMobile: true,
   },
@@ -244,16 +244,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Superior Websites",
+    text: "Delivers high-quality, visually appealing websites tailored to enhance your barbershop's unique brand",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Competitive Pricing",
+    text: "Offers more affordable services, maximizing budget efficiency for barbershops of all sizes.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,16 +261,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Responsive Support",
+    text: "Provides quick, efficient customer support to ensure seamless operations and minimal downtime.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Tailored Bookings",
+    text: "Features booking engines specifically designed for barbershops, improving the client experience and management.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -278,7 +278,7 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
+    title: "Social Assistance",
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
@@ -286,7 +286,7 @@ export const benefits = [
   },
   {
     id: "5",
-    title: "Improve everyday",
+    title: "Marketing Integration",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
