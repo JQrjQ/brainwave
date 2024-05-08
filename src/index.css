@@ -86,3 +86,12 @@
 .-rotate-360 {
   @apply rotate-[-360deg]
 }
+
+.sim-card-shape {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+}
+
+.sim-card-shape:after {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+  background-color: #3498db; 
+}
