@@ -66,7 +66,7 @@ export const navigation = [
   {
     id: "5",
     title: "Join Waitlist",
-    url: "#login",
+    url: "#kolOpenContestBox",
     onlyMobile: true,
   },
 ];

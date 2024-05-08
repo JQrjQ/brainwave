@@ -35,7 +35,7 @@ const Benefits = () => {
                     alt={item.title}
                   />
                   <a
-                    href="#"
+                    href="#kolOpenContestBox"
                     className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider"
                   >
                     Join Waitlist
