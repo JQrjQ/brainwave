@@ -245,7 +245,7 @@ export const benefits = [
   {
     id: "0",
     title: "Superior Websites",
-    text: "Delivers high-quality, visually appealing websites tailored to enhance your barbershop's unique brand",
+    text: "We craft killer websites that really pop and show off what makes your barbershop unique, so you totally stand out from the crowd.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -253,7 +253,7 @@ export const benefits = [
   {
     id: "1",
     title: "Competitive Pricing",
-    text: "Offers more affordable services, maximizing budget efficiency for barbershops of all sizes.",
+    text: "Clipii's got you covered with sweet deals that won't bust your budget, making it a solid pick for any size barbershop looking to save some cash without skimping on quality.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -262,7 +262,7 @@ export const benefits = [
   {
     id: "2",
     title: "Responsive Support",
-    text: "Provides quick, efficient customer support to ensure seamless operations and minimal downtime.",
+    text: "all about getting you the help you need fast and easy, keeping things running smoothly so you don't have to sweat about the small stuff.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -270,7 +270,7 @@ export const benefits = [
   {
     id: "3",
     title: "Tailored Bookings",
-    text: "Features booking engines specifically designed for barbershops, improving the client experience and management.",
+    text: "Our booking setup is custom-made just for barbershops, making it way easier for your clients to book with you and keeping things organized on your end.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -279,7 +279,7 @@ export const benefits = [
   {
     id: "4",
     title: "Social Assistance",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    text: "Since social media is key, Clipii hooks you up with all the right moves to amp up your online game and get more eyes on your biz.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -287,7 +287,7 @@ export const benefits = [
   {
     id: "5",
     title: "Marketing Integration",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    text: "Clipii amps up your marketing with slick tools that crank up your website traffic and get more bookings, all while playing nice with the systems you already use.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -295,12 +295,6 @@ export const benefits = [
 ];
 
 export const socials = [
-  {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
   {
     id: "1",
     title: "Twitter",
@@ -311,18 +305,12 @@ export const socials = [
     id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
-  },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
+    url: "https://instagram.com/_clipii",
   },
   {
     id: "4",
     title: "Facebook",
     iconUrl: facebook,
-    url: "#",
+    url: "https://facebook.com/clipii",
   },
 ];
