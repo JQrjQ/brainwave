@@ -27,12 +27,13 @@ const PricingList = () => {
             )}
           </div>
 
+
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            href="/#kolCloseContestBox"
             white={!!item.price}
           >
-            {item.price ? "Get started" : "Contact us"}
+            {item.price ? "Join Waitlist" : "Contact us"}
           </Button>
 
           <ul>

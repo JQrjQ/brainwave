@@ -27,9 +27,10 @@ const Pricing = () => {
           </div>
         </div>
 
+
         <Heading
-          tag="Get started with Brainwave"
-          title="Pay once, use forever"
+          tag="Guide Pricing"
+          title="These will be finalised before launch and are just a guide"
         />
 
         <div className="relative">
@@ -41,9 +42,9 @@ const Pricing = () => {
         <div className="flex justify-center mt-10">
           <a
             className="text-xs font-code font-bold tracking-wider uppercase border-b"
-            href="/pricing"
+            href="#kolCloseContestBox"
           >
-            See the full details
+            Join Waitlist
           </a>
         </div>
       </div>

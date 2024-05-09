@@ -208,38 +208,39 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
+    title: "Bookings",
+    description: "All you need to integrate our booking engine into your own website",
+    price: "TBC",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Intuitive UI for ease of use",
+      "Up to 10 staff menmbers included",
+      "SMS and email direct to customers",
     ],
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
+    title: "Website",
+    description: "A sexy website to promote your shop. No booking engine",
+    price: "TBC",
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "Great looking website",
+      "SEO optimised all search engines",
+      "Super quick response times",
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
+    title: "Bells & Whistles",
+    description: "Modern website, booking engine, socal media assistance and more",
+    price: "TBC",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Everything in Website and Bookings",
+      "AI Assistant for social media planning",
+      "Advanced marketing tools",
     ],
   },
 ];
+
 
 export const benefits = [
   {
