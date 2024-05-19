@@ -27,7 +27,7 @@ const PricingList = () => {
             )}
           </div>
 
-
+{/*
           <Button
             className="w-full mb-6"
             href="/#kolCloseContestBox"
@@ -35,6 +35,7 @@ const PricingList = () => {
           >
             {item.price ? "Join Waitlist" : "Contact us"}
           </Button>
+          */}
 
           <ul>
             {item.features.map((feature, index) => (
