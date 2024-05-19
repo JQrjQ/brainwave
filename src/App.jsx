@@ -4,6 +4,7 @@ import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import KickOffFormEmbed from "./components/KickOffFormEmbed";
 {/*import Pricing from "./components/Pricing";
 import Collaboration from "./components/Collaboration";
 import Roadmap from "./components/Roadmap";
@@ -21,7 +22,7 @@ const App = () => {
         <Services />
         
         <Roadmap />*/}
-        
+        <KickOffFormEmbed />
         <Footer />
       </div>
 
