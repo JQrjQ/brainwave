@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const WaitlistForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [queuePosition, setQueuePosition] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,9 +40,13 @@ const WaitlistForm = () => {
         throw new Error('Failed to submit form');
       }
 
+      // Submit the form to Netlify
+      form.submit();
+
       setIsSubmitted(true);
     } catch (error) {
-      alert(`Error: ${error.message}`);
+      setErrorMessage(error.message);
+      console.error('Error:', error);
     }
   };
 
@@ -94,6 +99,11 @@ const WaitlistForm = () => {
             </div>
           </form>
         </div>
+        {errorMessage && (
+          <div className="text-red-500 text-center mt-4">
+            <p>Error: {errorMessage}</p>
+          </div>
+        )}
       </div>
 
       {isSubmitted && (
