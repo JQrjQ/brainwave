@@ -2,26 +2,10 @@
 const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
-  const formData = JSON.parse(event.body).payload.data;
+  const formData = JSON.parse(event.body);
 
   const message = {
-    text: "New waitlist submission received!",
-    attachments: [
-      {
-        fields: [
-          {
-            title: "Name",
-            value: formData.name,
-            short: true
-          },
-          {
-            title: "Email",
-            value: formData.email,
-            short: true
-          }
-        ]
-      }
-    ]
+    text: `New waitlist submission received!\nName: ${formData.name}\nEmail: ${formData.email}`
   };
 
   const response = await fetch(process.env.SLACK_WEBHOOK_URL, {
@@ -44,3 +28,4 @@ exports.handler = async (event, context) => {
     body: JSON.stringify({ message: 'Notification sent' })
   };
 };
+

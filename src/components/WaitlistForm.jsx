@@ -1,3 +1,4 @@
+// WaitlistForm.jsx
 import React, { useState } from 'react';
 
 const WaitlistForm = () => {
@@ -9,19 +10,20 @@ const WaitlistForm = () => {
 
     // Gather form data
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-    // Send form data to Netlify
-    fetch('/', {
+    // Send form data to Netlify function
+    fetch('/.netlify/functions/notify-slack', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     })
       .then(() => setIsSubmitted(true))
       .catch((error) => alert(error));
   };
 
   return (
-    <section className="bg-n-8 py-16" id="waitlistForm">
+    <section className="bg-n-8 py-16" id="waitlist">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-n-1 mb-8">Join the Clipii Waitlist</h2>
         <div className="flex justify-center">
@@ -90,6 +92,7 @@ const WaitlistForm = () => {
 };
 
 export default WaitlistForm;
+
 
 
 
