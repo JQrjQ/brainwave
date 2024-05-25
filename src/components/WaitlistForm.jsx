@@ -15,9 +15,12 @@ const WaitlistForm = () => {
       data[key] = value;
     });
 
-    // Fetch current count
     try {
+      // Fetch current count
       const response = await fetch('/.netlify/functions/get-waitlist-count');
+      if (!response.ok) {
+        throw new Error('Failed to fetch current count');
+      }
       const result = await response.json();
       const currentCount = result.count;
 
@@ -26,15 +29,19 @@ const WaitlistForm = () => {
       setQueuePosition(newPosition);
 
       // Send form data to Netlify function
-      await fetch('/.netlify/functions/notify-slack', {
+      const submissionResponse = await fetch('/.netlify/functions/notify-slack', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
 
+      if (!submissionResponse.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setIsSubmitted(true);
     } catch (error) {
-      alert('Error:', error);
+      alert(`Error: ${error.message}`);
     }
   };
 
