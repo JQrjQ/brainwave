@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const response = await fetch(`https://api.netlify.com/api/v1/forms/${NETLIFY_FORM_ID}`, {
+    const response = await fetch(`https://api.netlify.com/api/v1/forms/${NETLIFY_FORM_ID}/submissions`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,9 +27,8 @@ exports.handler = async (event, context) => {
       };
     }
 
-
     const form = await response.json();
-    const count = form.submission_count;
+    const count = form.submission_count + 51; // Add 51 to the submission count
 
     return {
       statusCode: 200,
