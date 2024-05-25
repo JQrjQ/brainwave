@@ -1,8 +1,8 @@
-// WaitlistForm.jsx
 import React, { useState } from 'react';
 
 const WaitlistForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [queuePosition, setQueuePosition] = useState(0);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,14 +15,27 @@ const WaitlistForm = () => {
       data[key] = value;
     });
 
-    // Send form data to Netlify function
-    fetch('/.netlify/functions/notify-slack', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-      .then(() => setIsSubmitted(true))
-      .catch((error) => alert('Error:', error));
+    // Fetch current count
+    try {
+      const response = await fetch('/.netlify/functions/get-waitlist-count');
+      const result = await response.json();
+      const currentCount = result.count;
+
+      // Calculate new position in the queue
+      const newPosition = currentCount + 1;
+      setQueuePosition(newPosition);
+
+      // Send form data to Netlify function
+      await fetch('/.netlify/functions/notify-slack', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      setIsSubmitted(true);
+    } catch (error) {
+      alert('Error:', error);
+    }
   };
 
   return (
@@ -80,7 +93,7 @@ const WaitlistForm = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-n-8 border border-n-6 rounded-2xl p-6 space-y-4 max-w-sm mx-auto">
             <h3 className="text-2xl font-bold text-n-1">Thank You!</h3>
-            <p className="text-n-2">Thank you for joining our waitlist. You'll hear from us soon!</p>
+            <p className="text-n-2">You&apos;re number {queuePosition} in the queue. Thanks for joining our waitlist. You'll hear from us soon!</p>
             <button
               className="w-full py-3 bg-color-1 text-n-1 font-bold rounded-lg hover:bg-color-2 transition-colors"
               onClick={() => setIsSubmitted(false)}
