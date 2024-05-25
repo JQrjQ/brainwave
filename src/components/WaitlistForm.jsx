@@ -10,7 +10,10 @@ const WaitlistForm = () => {
 
     // Gather form data
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
 
     // Send form data to Netlify function
     fetch('/.netlify/functions/notify-slack', {
@@ -19,7 +22,7 @@ const WaitlistForm = () => {
       body: JSON.stringify(data)
     })
       .then(() => setIsSubmitted(true))
-      .catch((error) => alert(error));
+      .catch((error) => alert('Error:', error));
   };
 
   return (
@@ -92,6 +95,7 @@ const WaitlistForm = () => {
 };
 
 export default WaitlistForm;
+
 
 
 
