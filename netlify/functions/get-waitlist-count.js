@@ -27,8 +27,9 @@ exports.handler = async (event, context) => {
       };
     }
 
+
     const form = await response.json();
-    const count = form.submission_count + 51;
+    const count = form.submission_count;
 
     return {
       statusCode: 200,
