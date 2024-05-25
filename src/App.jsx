@@ -5,9 +5,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import WaitlistForm from "./components/WaitlistForm";
-{/*import KickOffFormEmbed from "./components/KickOffFormEmbed";
-import Pricing from "./components/Pricing";
-import Collaboration from "./components/Collaboration";
+import WaitlistCounter from "./components/WaitlistCounter";
+{/*import Collaboration from "./components/Collaboration";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";*/}
 
@@ -25,6 +24,7 @@ const App = () => {
         <Roadmap />
         <KickOffFormEmbed />*/}
         <WaitlistForm />
+        <WaitlistCounter />
         <Footer />
       </div>
 
