@@ -73,7 +73,7 @@ const Header = () => {
         >
           New account
           </a> */}
-        <Button className="hidden lg:flex" href="#kolOpenContestBox">
+        <Button className="hidden lg:flex" href="#waitlistForm">
           Join our Waitlist
         </Button>
 

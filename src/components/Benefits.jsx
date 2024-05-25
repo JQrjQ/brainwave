@@ -36,7 +36,7 @@ const Benefits = () => {
             className="pointer-events-auto"
           />
           <a
-            href="#kolOpenContestBox"
+            href="#waitlistForm"
             className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider pointer-events-auto"
           >
             Join Waitlist

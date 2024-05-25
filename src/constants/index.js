@@ -66,10 +66,11 @@ export const navigation = [
   {
     id: "5",
     title: "Join Waitlist",
-    url: "#kolOpenContestBox",
+    url: "#waitlistForm",
     onlyMobile: true,
   },
 ];
+
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
