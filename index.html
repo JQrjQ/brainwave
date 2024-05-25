@@ -34,6 +34,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Add this to your index.html or similar file -->
+<form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <button type="submit">Submit</button>
+</form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
