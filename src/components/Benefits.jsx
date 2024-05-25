@@ -14,61 +14,59 @@ const Benefits = () => {
           title="Work Smarter, Not Harder with Clipii"
         />
 
-<div className="flex flex-wrap gap-10 mb-10">
-  {benefits.map((item) => (
-    <div
-      className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] border-2 border-pink-800 rounded-e-3xl"
-      style={{
-        backgroundImage: `url(${item.backgroundUrl})`,
-      }}
-      key={item.id}
-    >
-      <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-        <h5 className="h5 mb-5">{item.title}</h5>
-        <p className="body-2 mb-6 text-n-3">{item.text}</p>
+        <div className="flex flex-wrap gap-10 mb-10">
+          {benefits.map((item) => (
+            <div
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] border-2 border-pink-800 rounded-e-3xl"
+              style={{
+                backgroundImage: `url(${item.backgroundUrl})`,
+              }}
+              key={item.id}
+            >
+              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
+                <h5 className="h5 mb-5">{item.title}</h5>
+                <p className="body-2 mb-6 text-n-3">{item.text}</p>
 
-        <div className="flex items-center mt-auto point pointer-events-auto">
-          <img
-            src={item.iconUrl}
-            width={48}
-            height={48}
-            alt={item.title}
-            className="pointer-events-auto"
-          />
-          <a
-            href="#waitlistForm"
-            className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider pointer-events-auto"
-          >
-            Join Waitlist
-          </a>
-          <Arrow />
+                <div className="flex items-center mt-auto z-10">
+                  <img
+                    src={item.iconUrl}
+                    width={48}
+                    height={48}
+                    alt={item.title}
+                  />
+                  <a
+                    href="#waitlistForm"
+                    className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider relative z-20"
+                  >
+                    Join Waitlist
+                  </a>
+                  <Arrow />
+                </div>
+              </div>
+
+              {item.light && <GradientLight />}
+
+              <div
+                className="absolute inset-0.5 bg-n-8 opacity-50 z-1"
+                style={{ clipPath: "url(#benefits)" }}
+              >
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                  {item.imageUrl && (
+                    <img
+                      src={item.imageUrl}
+                      width={380}
+                      height={362}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              </div>
+
+              <ClipPath />
+            </div>
+          ))}
         </div>
-      </div>
-
-      {item.light && <GradientLight />}
-
-      <div
-        className="absolute inset-0.5 bg-n-8 opacity-50 z-5"
-        style={{ clipPath: "url(#benefits)" }}
-      >
-        <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
-          {item.imageUrl && (
-            <img
-              src={item.imageUrl}
-              width={380}
-              height={362}
-              alt={item.title}
-              className="w-full h-full object-cover pointer-events-auto"
-            />
-          )}
-        </div>
-      </div>
-
-      <ClipPath />
-    </div>
-  ))}
-</div>
-
       </div>
     </Section>
   );
