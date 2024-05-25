@@ -40,8 +40,12 @@ const WaitlistForm = () => {
         throw new Error('Failed to submit form');
       }
 
-      // Submit the form to Netlify
-      form.submit();
+      // Send form data to Netlify Forms using AJAX
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
 
       setIsSubmitted(true);
     } catch (error) {
