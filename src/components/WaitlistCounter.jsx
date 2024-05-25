@@ -18,9 +18,9 @@ const WaitlistCounter = () => {
     fetchCount();
   }, []);
 
-  
+
   return (
-    <section className="bg-n-8 py-16" id="waitlistCounter">
+    <section className="bg-n-8 py-16 animate-bounce " id="waitlistCounter">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <div className="w-full max-w-md bg-n-8 border border-n-6 rounded-2xl p-6 space-y-6 text-center">

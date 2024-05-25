@@ -17,6 +17,7 @@ const App = () => {
         <Header />
         <Hero />
         <Benefits />
+        <WaitlistCounter />
         <Pricing />
         {/*<Collaboration />
         <Services />
