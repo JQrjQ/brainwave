@@ -1,4 +1,3 @@
-// WaitlistForm.jsx
 import React, { useState } from 'react';
 
 const WaitlistForm = () => {
@@ -7,19 +6,18 @@ const WaitlistForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
 
-    const response = await fetch('/.netlify/functions/submit-waitlist', {
+    // Gather form data
+    const formData = new FormData(form);
+
+    // Send form data to Netlify
+    fetch('/', {
       method: 'POST',
-      body: JSON.stringify({ name, email }),
-    });
-
-    if (response.ok) {
-      setIsSubmitted(true);
-    } else {
-      console.error('Error adding to waitlist');
-    }
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => setIsSubmitted(true))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -30,10 +28,17 @@ const WaitlistForm = () => {
           <form
             name="waitlist"
             method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="w-full max-w-md bg-n-8 border border-n-6 rounded-2xl p-6 space-y-6"
           >
             <input type="hidden" name="form-name" value="waitlist" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
             <div>
               <label className="block text-n-2 mb-2" htmlFor="name">Name</label>
               <input
@@ -85,6 +90,7 @@ const WaitlistForm = () => {
 };
 
 export default WaitlistForm;
+
 
 
 
