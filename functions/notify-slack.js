@@ -1,4 +1,4 @@
-require('dotenv').config();
+// functions/notify-slack.js
 const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
