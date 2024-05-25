@@ -26,7 +26,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <section className="bg-n-8 py-16" id="waitlist">
+    <section className="bg-n-8 py-16" id="waitlistForm">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-n-1 mb-8">Join the Clipii Waitlist</h2>
         <div className="flex justify-center">
