@@ -17,6 +17,7 @@ const WaitlistCounter = () => {
 
     fetchCount();
   }, []);
+  
 
 
   return (
