@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
   const formData = JSON.parse(event.body);
 
   const message = {
-    text: `New waitlist submission received!\nName: ${formData.name}\nEmail: ${formData.email}`
+    text: `AB New waitlist submission received!\nName: ${formData.name}\nEmail: ${formData.email}`
   };
 
   const response = await fetch(process.env.SLACK_WEBHOOK_URL, {

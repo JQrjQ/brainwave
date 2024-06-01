@@ -15,6 +15,7 @@ const App = () => {
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
+        <WaitlistForm />
         <Hero />
         <Benefits />
         <WaitlistCounter />
@@ -24,7 +25,7 @@ const App = () => {
         
         <Roadmap />
         <KickOffFormEmbed />*/}
-        <WaitlistForm />
+        
         <WaitlistCounter />
         <Footer />
       </div>
