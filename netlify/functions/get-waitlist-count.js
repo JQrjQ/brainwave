@@ -37,7 +37,7 @@ exports.handler = async (event, context) => {
       };
     }
 
-    const count = form.submission_count + 151; // Add 51 to the submission count
+    const count = form.submission_count + 161; // Add 51 to the submission count
 
     return {
       statusCode: 200,
